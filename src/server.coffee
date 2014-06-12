@@ -102,6 +102,9 @@ if process.env.VCAP_APPLICATION
   vcap = JSON.parse process.env.VCAP_APPLICATION
   audience = vcap.uris[0]
 
+if process.env.PERSONA_AUDIENCE
+  audience = process.env.PERSONA_AUDIENCE
+
 require('express-persona') app,
   audience: audience
 

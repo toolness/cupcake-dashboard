@@ -113,6 +113,10 @@
     audience = vcap.uris[0];
   }
 
+  if (process.env.PERSONA_AUDIENCE) {
+    audience = process.env.PERSONA_AUDIENCE;
+  }
+
   require('express-persona')(app, {
     audience: audience
   });
