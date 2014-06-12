@@ -39,11 +39,11 @@ angular.module('cupcakeDashboard')
 
   $rootScope.changeNotificationNumber = function(delta, reset){
     $rootScope.newNotifications += delta;
-    $window.document.title = "(" + $rootScope.newNotifications + ") Concepts | Firefox UX Dashboard"
+    $window.document.title = "(" + $rootScope.newNotifications + ") Concepts | Hive Labs Cupcakes"
     if(reset)
     {
       $rootScope.newNotifications = 0;
-      $window.document.title = "Concepts | Firefox UX Dashboard"
+      $window.document.title = "Concepts | Hive Labs Cupcakes"
     }
   }
 
