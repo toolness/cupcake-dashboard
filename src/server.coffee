@@ -471,6 +471,9 @@ app.post "/admin/load", (req, res) ->
 # whitelist of admin emails
 adminWhitelist = ['dhenein', 'bwinton', 'lco', 'madhava']
 
+if process.env.ADMIN_WHITELIST
+  adminWhitelist = process.env.ADMIN_WHITELIST.split(' ')
+
 getAuthLevel = (email) ->
   if email
     [username, domain] = email.split '@'

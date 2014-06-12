@@ -609,6 +609,10 @@
 
   adminWhitelist = ['dhenein', 'bwinton', 'lco', 'madhava'];
 
+  if (process.env.ADMIN_WHITELIST) {
+    adminWhitelist = process.env.ADMIN_WHITELIST.split(' ');
+  }
+
   getAuthLevel = function(email) {
     var domain, username, _ref;
     if (email) {
